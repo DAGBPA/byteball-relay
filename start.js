@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
-var conf = require('byteballcore/conf.js');
-var myWitnesses = require('byteballcore/my_witnesses.js');
+var conf = require('dag-pizza-dough/conf.js');
+var myWitnesses = require('dag-pizza-dough/my_witnesses.js');
 
 function replaceConsoleLog(){
 	var clog = console.log;
@@ -13,7 +13,7 @@ function replaceConsoleLog(){
 
 function start(){
 	console.log('starting');
-	var network = require('byteballcore/network.js');
+	var network = require('dag-pizza-dough/network.js');
 	if (conf.initial_peers)
 		conf.initial_peers.forEach(function(url){
 			network.findOutboundPeerOrConnect(url);
